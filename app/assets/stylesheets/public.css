@@ -33,7 +33,7 @@ a:hover {}
   background: #94B26F; color: #4C2516; }
 #content { padding: 10px; }
 #footer { clear: both; height: 2.5em; text-align: right;
-  background: #4C2516; color: #F2DC87; }
+  background: #4C2516 url('/assets/footer_gradient.png') repeat-y 0 0; color: #F2DC87; }
 #footer p { margin: 0; padding: 0.5em 1em; }
 
 /* Navigation */
