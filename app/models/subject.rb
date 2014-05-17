@@ -2,7 +2,12 @@ class Subject < ActiveRecord::Base
 
   has_many :pages
 
-  validates_presence_of :name
+  # validates_presence_of :name
+  # validates_length_of :name, :maximum => 255
+
+  # shortcut validations, aka "sexy validations"
+  validates :name, :presence => true,
+  											 :length => { :maximum => 255 }
 
   scope :visible, lambda { where(:visible => true) }
   scope :invisible, lambda { where(:visible => false) }
