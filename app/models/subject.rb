@@ -1,6 +1,11 @@
 class Subject < ActiveRecord::Base
 
+  # Could delete related pages automatically
+  # whenever a subject is deleted:
+  # has_many :pages, :dependent => :destroy
   has_many :pages
+
+  acts_as_list
 
   # validates_presence_of :name
   # validates_length_of :name, :maximum => 255
